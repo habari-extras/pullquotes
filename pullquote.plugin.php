@@ -15,8 +15,8 @@ class Pullquote extends Plugin
 	
 	public function action_init()
 	{
-		Stack::add( 'template_header_javascript', Site::get_url('scripts') . '/jquery.js', 'jquery' );
-		Stack::add( 'template_header_javascript', $this->get_url() . '/pullquote.js', 'pullquote-js', 'jquery' );
+		Stack::add( 'template_footer_javascript', Site::get_url('scripts') . '/jquery.js', 'jquery' );
+		Stack::add( 'template_footer_javascript', $this->get_url() . '/pullquote.js', 'pullquote-js', 'jquery' );
 		Stack::add( 'template_stylesheet', array( $this->get_url() . '/pullquote.css', 'screen,projector'), 'pullquote-css' );
 	}
 	
